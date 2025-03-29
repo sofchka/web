@@ -1,0 +1,46 @@
+
+{
+  "name": "Sofi Zakaryan",
+  "objective": "Computer Science student with a strong desire to learn and grow. Passionate about programming, problem-solving, and taking on new challenges in a supportive environment.",
+  "contact": {
+    "phone": "+374-96-35-30-22",
+    "email": "sofizaqar@gmail.com",
+    "location": "Yerevan, Armenia"
+  },
+  "experience": "No experience yet",
+  "education": [
+    {
+      "institution": "French University in Armenia",
+      "degree": "Bachelor of Applied Mathematics and Informatics",
+      "years": "2023 - Current"
+    },
+    {
+      "institution": "42 Yerevan",
+      "degree": "Computer Science",
+      "years": "2024 - Current"
+    },
+    {
+      "institution": "Synopsys Armenia Educational Department",
+      "degree": "Hardware Engineering",
+      "years": "2025 - Current"
+    }
+  ],
+  "skills": [
+    "C/C++, C#, Python",
+    "Git/GitHub",
+    "Linux OS (bash, vim)",
+    "HTML, CSS, JS",
+    "Nginx, Gunicorn",
+    "AWS, Networking, Servers, VMs"
+  ],
+  "languages": {
+    "Armenian": "Native",
+    "French": "B1",
+    "Russian": "B2",
+    "English": "B2 (Cambridge Certified)"
+  },
+  "social_media": {
+    "GitHub": "https://github.com/sofchka",
+    "LinkedIn": "www.linkedin.com/in/sofizaqaryancs"
+  }
+}

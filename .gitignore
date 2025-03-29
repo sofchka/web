@@ -1,0 +1,20 @@
+# Ignore .DS_Store files (macOS specific)
+.DS_Store
+
+# Ignore backup files created by text editors
+*.un~
+
+# Ignore app.py if it's a local config or environment file (if it’s sensitive, or just for local use)
+app.py
+
+# Ignore .DS_Store files in static and templates directories
+static/.DS_Store
+static/css/.DS_Store
+static/js/.DS_Store
+templates/.DS_Store
+
+# Ignore temporary files or compiled files
+static/css/.main.css.un~
+static/js/.main.js.un~
+templates/.index.html.un~
+

@@ -1,0 +1,48 @@
+from flask import Flask, render_template, request, jsonify
+from forms import ContactForm
+import json
+
+app = Flask(__name__)
+app.config.from_object('config')
+
+# Load profile data
+def load_profile_data():
+    with open('data/profile.json', 'r') as f:
+        return json.load(f)
+
+# Routes
+@app.route('/')
+def index():
+    profile_data = load_profile_data()
+    return render_template('index.html', profile=profile_data)
+
+@app.route('/about')
+def about():
+    profile_data = load_profile_data()
+    return render_template('about.html', profile=profile_data)
+
+@app.route('/who-i-am')
+def who_i_am():
+    profile_data = load_profile_data()
+    return render_template('who_i_am.html', profile=profile_data)
+
+@app.route('/hobbies')
+def hobbies():
+    profile_data = load_profile_data()
+    return render_template('hobbies.html', profile=profile_data)
+
+@app.route('/knowledge')
+def knowledge():
+    profile_data = load_profile_data()
+    return render_template('knowledge.html', profile=profile_data)
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    form = ContactForm()
+    if form.validate_on_submit():
+        return jsonify({'success': True})
+    return render_template('contact.html', form=form)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}My Hobbies{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <section data-aos="fade-up" class="text-center mb-16">
+        <h1 class="section-title">My Hobbies</h1>
+        <p class="text-lg max-w-3xl mx-auto">
+            Discover the activities that bring joy and balance to my life outside of work and studies.
+        </p>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {% for hobby in profile.hobbies %}
+        <div data-aos="fade-{{ 'left' if loop.index is odd else 'right' }}" 
+             data-aos-delay="{{ loop.index * 100 }}"
+             class="glass-card rounded-xl overflow-hidden">
+            <div class="p-8">
+                <div class="icon-container mb-6">
+                    <!-- Icon or image -->
+                </div>
+                <h3 class="text-2xl font-medium mb-4">
+                    {{ hobby.name }}
+                </h3>
+                <p class="leading-relaxed">
+                    {{ hobby.description }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
